@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-m5-app
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web-test
+  template:
+    metadata:
+      labels:
+        app: web-test
+    spec:
+      containers:
+      - name: nginx-server
+        image: nginxdemos/hello:plain
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            memory: "64Mi"
+            cpu: "250m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-m5-service
+  namespace: default
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: web-test
+
