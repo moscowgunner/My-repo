@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "argocd-and-gitops.md",
+                "file": "k3d-and-docker.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "argocd-and-gitops"
+              "title": "k3d-and-docker"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "argocd-and-gitops.md",
+                "file": "k3d-and-docker.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для argocd-and-gitops"
+              "title": "Обратные ссылки для k3d-and-docker"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "argocd-and-gitops.md",
+                "file": "k3d-and-docker.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Исходящие ссылки из argocd-and-gitops"
+              "title": "Исходящие ссылки из k3d-and-docker"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "argocd-and-gitops.md",
+                "file": "k3d-and-docker.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура argocd-and-gitops"
+              "title": "Структура k3d-and-docker"
             }
           }
         ]
@@ -185,10 +185,10 @@
   },
   "active": "ca2b0ce9b8613341",
   "lastOpenFiles": [
+    "argocd-and-gitops.md",
     "kubernetes-and-k9s.md",
     "k3d-and-docker.md",
     "DevOps-Главная.md",
-    "argocd-and-gitops.md",
     "Добро пожаловать.md",
     "Без названия.canvas"
   ]
