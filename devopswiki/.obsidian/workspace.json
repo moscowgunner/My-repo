@@ -185,8 +185,8 @@
   },
   "active": "ca2b0ce9b8613341",
   "lastOpenFiles": [
-    "argocd-and-gitops.md",
     "kubernetes-and-k9s.md",
+    "argocd-and-gitops.md",
     "k3d-and-docker.md",
     "DevOps-Главная.md",
     "Добро пожаловать.md",

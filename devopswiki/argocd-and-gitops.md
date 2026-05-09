@@ -17,7 +17,7 @@ kubectl port-forward svc/argocd-server -n argocd 8443:443
 Установить ArgoCD в чистый кластер, обходя лимиты клиентского apply и конфликты полей:
 ```bash
 kubectl create namespace argocd
-kubectl apply --server-side --force-conflicts -n argocd -f https://githubusercontent.com
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
 
 ## 🔄 Скорая помощь при ошибке ImagePullBackOff (Российское зеркало)
