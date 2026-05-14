@@ -1,0 +1,37 @@
+---
+- name: Установка и настройка Docker на полноценном Linux-сервере
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Установка компонентов Docker и системных зависимостей
+      apt:
+        name:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - software-properties-common
+          - gnupg
+          - docker.io
+        state: present
+        update_cache: yes
+
+    - name: Настройка daemon.json для обхода блокировок Docker Hub (Зеркала Registry)
+      copy:
+        dest: "/etc/docker/daemon.json"
+        content: |
+          {
+              "registry-mirrors": [
+                  "https://gcr.io",
+                  "https://cr.yandex",
+                  "https://docker-cn.com",
+                  "https://aliyuncs.com"
+              ]
+          }
+        mode: "0644"
+
+    - name: Перезапуск и включение службы Docker через Systemd
+      service:
+        name: docker
+        state: restarted
+        enabled: yes
+

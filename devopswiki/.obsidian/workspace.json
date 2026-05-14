@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "k3d-and-docker.md",
+                "file": "Песочница.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "k3d-and-docker"
+              "title": "Песочница"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "k3d-and-docker.md",
+                "file": "Песочница.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для k3d-and-docker"
+              "title": "Обратные ссылки для Песочница"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "k3d-and-docker.md",
+                "file": "Песочница.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Исходящие ссылки из k3d-and-docker"
+              "title": "Исходящие ссылки из Песочница"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "k3d-and-docker.md",
+                "file": "Песочница.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура k3d-and-docker"
+              "title": "Структура Песочница"
             }
           }
         ]
@@ -185,10 +185,15 @@
   },
   "active": "ca2b0ce9b8613341",
   "lastOpenFiles": [
-    "kubernetes-and-k9s.md",
     "argocd-and-gitops.md",
+    "Ansible.md",
+    "Настройка Terraform (обход ограничений).md",
+    "Terraform команды.md",
+    "Terrafrom.md",
+    "Пример манифеста Terraform.md",
+    "Песочница.md",
     "k3d-and-docker.md",
-    "DevOps-Главная.md",
+    "kubernetes-and-k9s.md",
     "Добро пожаловать.md",
     "Без названия.canvas"
   ]
