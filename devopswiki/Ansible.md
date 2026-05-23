@@ -10,7 +10,7 @@
 Указываем локальное выполнение на хосте разработки (Mac):
 ```ini
 [webservers]
-localhost ansible_connection=local
+192.168.139.153 ansible_user=vladislav ansible_password=12345 ansible_sudo_pass=12345
 ```
 
 ## 📜 2. Шаблон отказоустойчивого плейбука
@@ -58,24 +58,109 @@ localhost ansible_connection=local
 Пример обычного плейбука без танцев с контейнерами:
 
 ```
-- name: установка и настройка apache
-hosts: webservers
-become: yes
-tasks:
-    - name: обновление apt кэша
-       apt:
-            update_cache: yes
-            cache_valid_time: 3600
-    - name: установка apache
+---
 
-       apt:
-            name: apache2
-            state: present
-- name: запуск и включение apache
-   service:
-       name: apache2
-       state: started
-       enabled: yes
+- name: Установка и настройка apache
+
+hosts: webservers
+
+become: yes
+
+tasks:
+
+- name: Обновление apt кэша
+
+apt:
+
+update_cache: yes
+
+cache_valid_time: 3600
+
+when: not (cleanup_apache | default(false) | bool)
+
+  
+
+- name: Установка apache
+
+apt:
+
+name: apache2
+
+state: present
+
+when: not (cleanup_apache | default(false) | bool)
+
+  
+
+- name: Запуск и включение apache
+
+service:
+
+name: apache2
+
+state: started
+
+enabled: yes
+
+when: not (cleanup_apache | default(false) | bool)
+
+  
+
+- name: Завершение работы apache (cleanup)
+
+hosts: webservers
+
+become: yes
+
+tasks:
+
+- name: Остановка apache
+
+service:
+
+name: apache2
+
+state: stopped
+
+when: cleanup_apache | default(false) | bool
+
+  
+
+- name: Отключение автозапуска apache
+
+service:
+
+name: apache2
+
+enabled: no
+
+when: cleanup_apache | default(false) | bool
+
+  
+
+- name: Удаление пакета apache
+
+apt:
+
+name: apache2
+
+state: absent
+
+when: cleanup_apache | default(false) | bool
+
+  
+
+- name: Полное удаление конфигурационных файлов apache
+
+apt:
+
+name: apache2
+
+state: absent
+
+purge: yes
+
+when: cleanup_apache | default(false) | bool
 ```
 
 
