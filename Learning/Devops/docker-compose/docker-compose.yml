@@ -1,0 +1,43 @@
+version: '3'
+services:
+  nginx:
+    image: nginx:1.17.8
+    ports:
+      - "8080:80"
+    volumes:
+      - ./code:/code
+      - ./docker/nginx/site.conf:/etc/nginx/conf.d/site.conf
+    networks:
+      - demo-network
+      
+  php:
+    build:
+      context: docker/php-fpm
+    volumes:
+      - ./code:/code
+      - ./docker/php-fpm/php.ini:/usr/local/etc/php/php.ini
+    networks:
+      - demo-network
+    
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'base'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: '12345'
+      MYSQL_ROOT_PASSWORD: 'root'
+    volumes:
+      - ./docker/db:/var/lib/mysql
+    networks:
+      - demo-network
+    ports:
+      - "3306:3306"
+networks:
+    demo-network:
+        driver: bridge
+        ipam:      
+          config:  
+          - subnet: 192.168.220.0/24
+    
+    
