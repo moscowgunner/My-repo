@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Пример манифеста Terraform.md",
+                "file": "Ansible.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Пример манифеста Terraform"
+              "title": "Ansible"
             }
           }
         ]
@@ -185,13 +185,16 @@
   },
   "active": "ca2b0ce9b8613341",
   "lastOpenFiles": [
-    "Настройка Terraform (обход ограничений).md",
     "Terrafrom.md",
+    "Пример манифеста Terraform.md",
     "Terraform команды.md",
+    "Настройка Terraform (обход ограничений).md",
+    "Шаблоны Docker Compose.md",
+    "Docker compose команды.md",
+    "Docker команды.md",
     "Ansible.md",
     "Песочница.md",
     "argocd-and-gitops.md",
-    "Пример манифеста Terraform.md",
     "k3d-and-docker.md",
     "kubernetes-and-k9s.md",
     "Добро пожаловать.md",
