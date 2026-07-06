@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Шаблоны Docker Compose.md",
+                "file": "🧭 kubectx и управление kubeconfig.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Шаблоны Docker Compose"
+              "title": "🧭 kubectx и управление kubeconfig"
             }
           }
         ]
@@ -186,17 +186,20 @@
   "active": "ca2b0ce9b8613341",
   "lastOpenFiles": [
     "Настройка Terraform (обход ограничений).md",
-    "Песочница.md",
+    "🧭 kubectx и управление kubeconfig.md",
     "k3d-and-docker.md",
+    "k3s Troubleshooting.md",
+    "kubernetes-and-k9s.md",
+    "Песочница.md",
+    "Схема k8s.md",
+    "Шаблоны Docker Compose.md",
     "Пример манифеста Terraform.md",
     "argocd-and-gitops.md",
     "Ansible.md",
     "Terrafrom.md",
     "Terraform команды.md",
-    "Шаблоны Docker Compose.md",
     "Docker compose команды.md",
     "Docker команды.md",
-    "kubernetes-and-k9s.md",
     "Добро пожаловать.md",
     "Без названия.canvas"
   ]
